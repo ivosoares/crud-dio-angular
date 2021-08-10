@@ -16,6 +16,9 @@ import { TodoItemComponent } from './pages/todo/todo-item/todo-item.component';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { DataBindingComponent } from './pages/data-binding/data-binding.component';
+import { ButtonComponent } from './components/button/button.component';
+import { LifeCycleComponent } from './components/life-cycle/life-cycle.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import {MatIconModule} from '@angular/material/icon';
     UsersListComponent,
     UserFormComponent,
     TodoListComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    DataBindingComponent,
+    ButtonComponent,
+    LifeCycleComponent
   ],
   imports: [
     BrowserModule,
