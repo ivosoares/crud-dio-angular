@@ -1,0 +1,53 @@
+<div class="form-group">
+  <label for="number">Number:</label>
+  <input type="text" [(ngModel)]="number" class="form-control" id="number">
+  <p>{{ number }}</p>
+  <button class="btn btn-success" (click)="mudaValor()">Click</button>
+</div>
+
+<div class="">
+    <p>SLICE {{ text | slice:3:8}}</p>
+
+    <p>sem formatacao:</p>
+    <p>{{ number | number}}</p>
+
+    <p>Resultado com formatacao</p>
+    <p>{{ number | number:'2.0-1'}}</p>
+
+    <p>Resultado em moeda</p>
+    <p>{{ number | currency:'BRL'}}</p>
+
+    <p>Resultado em porcentagem</p>
+    <p>{{ number | percent}}</p>
+
+
+    <p>Data de Hoje</p>
+    <p>{{ date }}</p>
+    <p>{{ date | date}}</p>
+    <p>DATA FORMATADA: {{ date | date:"dd/MM/yyyy":"GMT-0300":"en-US" }}</p>
+    <p>{{ date | date:'full' | uppercase}}</p>
+    <p>{{ text | uppercase}}</p>
+
+    <p>{{ pessoa | json}}</p>
+</div>
+<div class="container">
+  <div class="col">
+    <div class="row-6">
+      <div class="form-group">
+        <label for="text">Print Pipe Test:</label>
+        <input type="text" name="text" id="text" #nome>
+        <button class="btn btn-primary" (click)="add(nome.value)">add</button>
+        <button class="btn btn-primary" (click)="addToPromisse(nome.value)">add Promisse</button>
+        <button class="btn btn-primary" (click)="addToObservable(nome.value)">add Observable</button>
+      </div>
+    </div>
+    <div class="row-6">
+      <h3>Lista formatada</h3>
+      <p>Tamanho da lista {{ nomes.length }}</p>
+      <p>{{ nomes | printList}}</p>
+    </div>
+  </div>
+
+  <h3>Saida da promisse: {{ nomesPromisse | async | printList}}</h3>
+  <h3>Saida do observable: {{ nomes$ | async | printList}}</h3>
+</div>
